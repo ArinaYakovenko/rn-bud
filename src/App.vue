@@ -69,21 +69,23 @@ const location = {
   address: 'ul. Romana Grodeckiego 131, 32-700 Bochnia',
   city: 'Bochnia, Małopolskie',
   mapUrl: 'https://www.openstreetmap.org/export/embed.html?bbox=20.4340420%2C49.985802%2C20.4352420%2C49.986302&layer=mapnik&marker=49.986052%2C20.434642',
+  googleMapsEmbed: 'https://www.google.com/maps?q=49.9860337,20.4347081&z=17&output=embed',
 }
 
 const contact = {
   email: 'kontakt@rn-bud.com',
   preferred: 'czat, e-mail, telefon',
   oferteo: 'https://www.oferteo.pl/rn-bud-serhii-zosyk/firma/5433282',
+  googleMapsReview: 'https://www.google.com/maps/place/RN-BUD+%7C+Tynki+maszynowe,+g%C5%82adzie,+ocieplenia+i+adaptacje+poddaszy/@49.9860371,20.4321332,17z/data=!3m1!4b1!4m6!3m5!1s0x4568a8cefbcb41f:0x3b8fcacdfadd6d02!8m2!3d49.9860337!4d20.4347081!16s%2Fg%2F11md_zyl8w?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
   nip: '8681988843',
   regon: '524615233',
 }
 </script>
 
 <template>
-  <div class="min-h-screen bg-slate-50 text-slate-900">
+  <div class="min-h-screen bg-slate-50 text-slate-900 selection:bg-[#0f4c81] selection:text-white">
     <header class="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div class="mx-auto flex container items-center justify-between px-4 py-4 sm:px-6 lg:px-8 xl:px-10">
         <a href="#top" class="flex items-center gap-3">
           <img :src="logoUrl" alt="RN-BUD logo" class="h-12 w-12 rounded-full border border-slate-200 object-cover" />
           <div>
@@ -99,34 +101,34 @@ const contact = {
           <a href="#contact" class="transition hover:text-slate-900">Kontakt</a>
         </nav>
 
-        <a :href="contact.oferteo" target="_blank" class="inline-flex items-center rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-600/20 transition hover:bg-sky-700">Zobacz profil</a>
+        <a :href="contact.oferteo" target="_blank" rel="noreferrer noopener" class="btn btn-primary">Zobacz profil</a>
       </div>
     </header>
 
     <main class="overflow-hidden" id="top">
-      <section class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+      <section class="mx-auto grid container gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 xl:px-12">
         <div class="space-y-8">
           <span class="inline-flex rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-slate-700">Tynki • Gładzie • Ocieplenia</span>
           <div class="space-y-6">
             <h1 class="max-w-3xl text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">RN-BUD realizuje solidne prace tynkarskie i wykończeniowe w Małopolsce.</h1>
-            <p class="max-w-2xl text-lg leading-8 text-slate-600">Wykonujemy tynki cementowo-wapienne, gładzie wapienne, ocieplenia poddaszy oraz sufity podwieszane. Jeśli szukasz rzetelnej budowlanej ekipy, chętnie przygotujemy ofertę i domówimy termin.</p>
+            <p class="max-w-2xl text-lg leading-8 text-slate-600">Wykonujemy tynki cementowo-wapienne, gładzie wapienne, ocieplenia poddaszy oraz sufity podwieszane. Jeśli szukasz rzetelnej budowlanej ekipy, chętnie przygotujemy ofertę i ustalimy termin.</p>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a href="#contact" class="inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:bg-slate-800 sm:w-auto">Poproś o wycenę</a>
-            <a :href="contact.oferteo" target="_blank" class="inline-flex w-full items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-300 sm:w-auto">Opinie na Oferteo</a>
+            <a href="#contact" class="btn btn-primary w-full text-center sm:w-auto">Poproś o wycenę</a>
+            <a :href="contact.oferteo" target="_blank" rel="noreferrer noopener" class="btn btn-secondary w-full text-center sm:w-auto">Opinie na Oferteo</a>
           </div>
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <div class="rounded-3xl bg-slate-900 p-5 text-white shadow-soft">
+            <div class="rounded-[2rem] bg-slate-950 p-6 text-white card-glow">
               <p class="text-sm uppercase tracking-[0.18em] text-slate-300">Ocena</p>
               <p class="mt-4 text-3xl font-semibold">5.0</p>
               <p class="mt-2 text-sm text-slate-300">20 potwierdzonych opinii</p>
             </div>
-            <div class="rounded-3xl bg-slate-900 p-5 text-white shadow-soft">
+            <div class="rounded-[2rem] bg-slate-950 p-6 text-white card-glow">
               <p class="text-sm uppercase tracking-[0.18em] text-slate-300">Region</p>
               <p class="mt-4 text-3xl font-semibold">Małopolska</p>
               <p class="mt-2 text-sm text-slate-300">obsługa także Świętokrzyskie</p>
             </div>
-            <div class="rounded-3xl bg-slate-900 p-5 text-white shadow-soft">
+            <div class="rounded-[2rem] bg-slate-950 p-6 text-white card-glow">
               <p class="text-sm uppercase tracking-[0.18em] text-slate-300">Darmowa wycena</p>
               <p class="mt-4 text-3xl font-semibold">Tak</p>
               <p class="mt-2 text-sm text-slate-300">Oferta po zapytaniu lub wizji lokalnej</p>
@@ -135,7 +137,7 @@ const contact = {
         </div>
 
         <div class="relative overflow-hidden rounded-[2rem] bg-slate-950 shadow-soft">
-          <img :src="heroImage" alt="Construction team working" class="h-full w-full object-cover" />
+          <img :src="heroImage" alt="Zespół RN-BUD pracujący nad wykończeniem wnętrza" class="h-full w-full object-cover" loading="lazy" />
           <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 to-transparent p-6 text-white">
             <p class="text-sm uppercase tracking-[0.24em] text-slate-300">RN-BUD</p>
             <h2 class="mt-3 text-2xl font-semibold">Skuteczne wykończenia wnętrz i tynki</h2>
@@ -144,7 +146,7 @@ const contact = {
       </section>
 
       <section class="bg-slate-50 py-16">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
           <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div class="rounded-[2rem] bg-white p-8 shadow-soft">
               <h2 class="text-3xl font-semibold text-slate-900">O firmie</h2>
@@ -191,9 +193,9 @@ const contact = {
       </section>
 
       <section id="offers" class="py-16">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
           <div class="mb-10 max-w-2xl">
-            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sky-600">Oferta</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#0f4c81]">Oferta</p>
             <h2 class="mt-3 text-3xl font-semibold text-slate-900">Najczęściej realizowane usługi</h2>
             <p class="mt-4 text-slate-600">Pracujemy w zakresie tynków, gładzi, adaptacji poddaszy i sufitów podwieszanych. Wszystkie realizacje wykonujemy solidnie i z dbałością o porządek.</p>
           </div>
@@ -210,7 +212,7 @@ const contact = {
       </section>
 
       <section id="process" class="bg-slate-50 py-16">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
           <div class="mb-10 max-w-2xl">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Proces</p>
             <h2 class="mt-3 text-3xl font-semibold text-slate-900">Jak pracujemy</h2>
@@ -218,7 +220,7 @@ const contact = {
           </div>
           <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             <article v-for="item in process" :key="item.step" class="rounded-[2rem] bg-white p-8 shadow-soft">
-              <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-sky-600 text-2xl font-semibold text-white">{{ item.step }}</div>
+              <div class="flex h-14 w-14 items-center justify-center rounded-3xl bg-[#0f4c81] text-2xl font-semibold text-white">{{ item.step }}</div>
               <h3 class="mt-6 text-xl font-semibold text-slate-900">{{ item.title }}</h3>
               <p class="mt-3 text-slate-600">{{ item.detail }}</p>
             </article>
@@ -227,7 +229,7 @@ const contact = {
       </section>
 
       <section id="gallery" class="py-16">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
           <div class="mb-10 max-w-2xl">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Galeria</p>
             <h2 class="mt-3 text-3xl font-semibold text-slate-900">Zdjęcia realizacji</h2>
@@ -245,10 +247,10 @@ const contact = {
       </section>
 
       <section class="bg-slate-50 py-16">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
           <div class="grid gap-10 xl:grid-cols-[1.2fr_0.8fr]">
             <div class="rounded-[2rem] bg-white p-8 shadow-soft">
-              <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sky-600">Lokalizacja</p>
+              <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#0f4c81]">Lokalizacja</p>
               <h2 class="mt-3 text-3xl font-semibold text-slate-900">Biuro RN-BUD w Bochni</h2>
               <p class="mt-4 text-slate-600">Jeśli mieszkasz w Małopolsce lub Świętokrzyskim, możesz skontaktować się z nami bezpośrednio przez profil Oferteo lub mailowo.</p>
               <div class="mt-10 grid gap-4 sm:grid-cols-2">
@@ -280,12 +282,12 @@ const contact = {
       </section>
 
       <section id="contact" class="py-16">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
           <div class="grid gap-10 rounded-[2rem] bg-slate-900 p-8 text-white shadow-soft lg:grid-cols-[1.2fr_0.8fr]">
             <div class="space-y-6">
-              <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">Kontakt</p>
+              <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#0f4c81]/60">Kontakt</p>
               <h2 class="text-3xl font-semibold">Potrzebujesz wyceny lub opinii?</h2>
-              <p class="max-w-2xl text-slate-300">Napisz lub zadzwoń, a przygotujemy szczegółową ofertę. Jeśli zrobiliśmy już dla Ciebie prace, zostaw opinię na Oferteo, aby inni mogli nas znaleźć.</p>
+              <p class="max-w-2xl text-slate-300">Napisz lub zadzwoń, a przygotujemy szczegółową ofertę. Jeśli zrobiliśmy już dla Ciebie prace, zostaw opinię na Oferteo lub w Google Maps, aby inni mogli nas znaleźć.</p>
               <div class="grid gap-4 sm:grid-cols-2">
                 <div class="rounded-3xl bg-slate-950 p-6">
                   <p class="text-sm uppercase tracking-[0.2em] text-slate-400">E-mail</p>
@@ -306,7 +308,36 @@ const contact = {
                 <p class="text-sm uppercase tracking-[0.2em] text-slate-400">REGON</p>
                 <p class="mt-3 text-lg font-semibold text-white">{{ contact.regon }}</p>
               </div>
-              <a :href="contact.oferteo" target="_blank" class="inline-flex items-center justify-center rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-600/20 transition hover:bg-sky-500">Zostaw opinię na Oferteo</a>
+              <a :href="contact.oferteo" target="_blank" rel="noreferrer noopener" class="btn btn-primary">Zostaw opinię na Oferteo</a>
+              <a :href="contact.googleMapsReview" target="_blank" rel="noreferrer noopener" class="btn btn-outline-accent">Zostaw opinię w Google Maps</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-slate-50 py-16">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+            <div class="space-y-6 rounded-[2rem] bg-white p-8 shadow-soft">
+              <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#0f4c81]">Opinie Google Maps</p>
+              <h2 class="text-3xl font-semibold text-slate-900">Zobacz naszą lokalizację i zostaw ocenę</h2>
+              <p class="text-slate-600">Aby pomóc nam rozwijać RN-BUD, prosimy o ocenę w Google Maps. Twoja opinia jest ważna zarówno dla nas, jak i dla innych klientów szukających rzetelnych wykonawców.</p>
+              <div class="flex flex-col gap-4 sm:flex-row">
+                <a :href="contact.googleMapsReview" target="_blank" rel="noreferrer noopener" class="btn btn-primary">Zostaw opinię w Google Maps</a>
+                <a :href="contact.googleMapsReview" target="_blank" rel="noreferrer noopener" class="btn btn-secondary">Odwiedź Google Maps</a>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-soft">
+              <iframe
+                title="RN-BUD Google Maps"
+                width="100%"
+                height="420"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                :src="location.googleMapsEmbed"
+                class="h-full w-full"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -314,7 +345,7 @@ const contact = {
     </main>
 
     <footer class="border-t border-slate-200 bg-white py-8">
-      <div class="mx-auto max-w-7xl px-4 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+      <div class="mx-auto container px-4 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
         © 2026 RN-BUD Serhii Zosyk. Wykonujemy tynki, gładzie i adaptacje poddaszy w Małopolsce.
       </div>
     </footer>

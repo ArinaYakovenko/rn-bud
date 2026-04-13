@@ -1,11 +1,46 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-slate-50 text-slate-900 antialiased;
   }
 
   * {
     @apply box-border;
+  }
+
+  a {
+    @apply transition duration-200;
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition;
+  }
+
+  .btn-primary {
+    @apply text-white shadow-lg hover:text-white;
+    background-color: #0f4c81;
+    box-shadow: 0 20px 30px rgba(15, 76, 129, 0.18);
+  }
+
+  .btn-secondary {
+    @apply border border-slate-200 bg-white text-slate-900 hover:bg-slate-50;
+  }
+
+  .btn-outline-accent {
+    @apply border bg-white hover:bg-slate-50;
+    border-color: #0f4c81;
+    color: #0f4c81;
+    background-color: #ffffff;
+  }
+
+  .card-glow {
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
   }
 }
