@@ -34,7 +34,7 @@ const closeImage = () => {
     <div class="mx-auto container px-4 sm:px-6 lg:px-8">
       <div class="mb-10 flex flex-col gap-4 rounded-[2rem] bg-white p-8 shadow-soft sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#0f4c81]">Galeria</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#0a3357]">Galeria</p>
           <h1 class="mt-3 text-3xl font-semibold text-slate-900">{{ category?.title }}</h1>
           <p class="mt-4 max-w-3xl text-slate-600">{{ category?.subtitle }}</p>
         </div>
