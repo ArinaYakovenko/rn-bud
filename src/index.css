@@ -6,7 +6,7 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply bg-[#faf9f7] text-slate-900 antialiased;
   }
 
   * {
@@ -24,23 +24,48 @@
   }
 
   .btn-primary {
-    @apply text-white shadow-lg hover:text-white;
+    @apply text-white shadow-lg hover:opacity-90 hover:text-white;
     background-color: #0f4c81;
-    box-shadow: 0 20px 30px rgba(15, 76, 129, 0.18);
+    box-shadow: 0 20px 30px rgba(15, 76, 129, 0.22);
+  }
+
+  .btn-accent {
+    @apply text-white shadow-lg hover:opacity-90 hover:text-white;
+    background-color: #d4760a;
+    box-shadow: 0 16px 28px rgba(212, 118, 10, 0.25);
   }
 
   .btn-secondary {
     @apply border border-slate-200 bg-white text-slate-900 hover:bg-slate-50;
   }
 
-  .btn-outline-accent {
+  .btn-outline-primary {
     @apply border bg-white hover:bg-slate-50;
     border-color: #0f4c81;
     color: #0f4c81;
-    background-color: #ffffff;
+  }
+
+  .btn-outline-accent {
+    @apply border bg-white hover:bg-orange-50;
+    border-color: #d4760a;
+    color: #d4760a;
   }
 
   .card-glow {
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
+  }
+
+  .section-label-blue {
+    @apply text-sm font-semibold uppercase tracking-[0.25em];
+    color: #0f4c81;
+  }
+
+  .section-label-amber {
+    @apply text-sm font-semibold uppercase tracking-[0.25em];
+    color: #d4760a;
+  }
+
+  .star-row {
+    @apply flex gap-0.5 text-amber-400;
   }
 }
