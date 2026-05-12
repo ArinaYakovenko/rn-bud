@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  a {
+    @apply transition duration-200;
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 font-medium transition;
+  }
+
+  .btn-primary {
+    @apply text-white hover:opacity-90 hover:text-white;
+    background-color: #0a3357;
+    box-shadow: 0 20px 30px rgba(15, 76, 129, 0.22);
+  }
+
+  .btn-accent {
+    @apply text-white hover:opacity-90 hover:text-white;
+    background-color: #0a3357;
+    box-shadow: 0 16px 28px rgba(15, 76, 129, 0.2);
+  }
+
+  .btn-secondary {
+    @apply border border-slate-300 bg-white text-slate-800 hover:bg-slate-100;
+  }
+
+  .btn-outline-primary {
+    @apply border bg-white hover:bg-slate-50;
+    border-color: #0a3357;
+    color: #0a3357;
+  }
+
+  .btn-outline-accent {
+    @apply border bg-white hover:bg-slate-50;
+    border-color: #0a3357;
+    color: #0a3357;
+  }
+
+  .card-glow {
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .section-label-blue {
+    @apply text-sm font-semibold uppercase tracking-[0.25em];
+    color: #0a3357;
+  }
+
+  .section-label-amber {
+    @apply text-sm font-semibold uppercase tracking-[0.25em];
+    color: #475569;
+  }
+
+  .star-row {
+    @apply flex gap-0.5 text-amber-400;
+  }
+}
