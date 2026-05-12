@@ -9,11 +9,9 @@ const category = computed(() => galleryCategories[0])
 const gallerySections = computed(() => {
   const images = category.value?.images ?? []
   const grouped = images.reduce<Record<string, typeof images>>((sections, image) => {
-    if (!sections[image.folder]) {
-      sections[image.folder] = []
-    }
-
-    sections[image.folder].push(image)
+    const folderImages = sections[image.folder] ?? []
+    folderImages.push(image)
+    sections[image.folder] = folderImages
     return sections
   }, {})
 
@@ -23,8 +21,6 @@ const gallerySections = computed(() => {
     images: folderImages,
   }))
 })
-
-const totalImages = computed(() => category.value?.images.length ?? 0)
 
 const formatFolderTitle = (folder: string) => {
   if (folder === 'gładzie') {
@@ -60,7 +56,7 @@ const closeImage = () => {
     <div class="mx-auto container px-4 sm:px-6 lg:px-8">
       <div class="mb-10 flex flex-col gap-4 rounded-4xl bg-white p-8 shadow-soft sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#0f4c81]">Galeria</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#0a3357]">Galeria</p>
           <h1 class="mt-3 text-3xl font-semibold text-slate-900">{{ category?.title }}</h1>
           <p class="mt-4 max-w-3xl text-slate-600">{{ category?.subtitle }}</p>
         </div>
@@ -69,9 +65,8 @@ const closeImage = () => {
 
       <div v-if="gallerySections.length" class="space-y-12">
         <section v-for="section in gallerySections" :key="section.folder" class="space-y-5">
-          <div class="flex items-center justify-between gap-4">
+          <div class="flex items-center justify-between gap-4 border-b border-slate-200 pb-3">
             <h2 class="text-2xl font-semibold text-slate-900">{{ formatFolderTitle(section.folder) }}</h2>
-            <p class="text-sm uppercase tracking-[0.22em] text-slate-500">{{ section.images.length }} zdjęć</p>
           </div>
 
           <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
@@ -87,7 +82,7 @@ const closeImage = () => {
                 @click="openImage(image)"
               />
               <div class="p-5">
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#0f4c81]">{{ formatFolderTitle(section.folder) }}</p>
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#0a3357]">{{ formatFolderTitle(section.folder) }}</p>
                 <p class="mt-2 text-slate-700">{{ image.alt }}</p>
               </div>
             </div>
