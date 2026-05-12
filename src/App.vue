@@ -26,7 +26,8 @@ const contact = {
         </router-link>
 
         <nav class="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
-          <router-link v-for="link in navLinks" :key="link.label" :to="link.to" class="transition hover:text-slate-900">{{ link.label }}</router-link>
+          <router-link v-for="link in navLinks" :key="link.label" :to="link.to"
+            class="transition hover:text-slate-900">{{ link.label }}</router-link>
         </nav>
 
         <a :href="contact.oferteo" class="btn btn-primary" target="_blank" rel="noreferrer noopener">Zobacz profil</a>
@@ -39,7 +40,7 @@ const contact = {
 
     <footer class="border-t border-slate-200 bg-white py-8">
       <div class="mx-auto container px-4 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
-        © 2026 RN-BUD Serhii Zosyk. Wykonujemy tynki, gładzie i adaptacje poddaszy w Małopolsce.
+        © 2026 RN-BUD Serhii Zosyk. Tynki cementowo-wapienne, gładzie wapienne, ocieplenia poddaszy i sufity podwieszane.
       </div>
     </footer>
   </div>
