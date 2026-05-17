@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
-const logoUrl = 'https://static.oferteo.pl/images/portfolio/5433282/256px_s/1749159033614-1749159033526_avatar.jpg'
+import logoUrl from '@assets/logo.svg';
 
 const navLinks = [
   { to: { path: '/', hash: '#offers' }, label: 'Usługi' },
@@ -33,8 +32,9 @@ const closeMenu = () => {
       <div class="mx-auto flex container items-center justify-between px-4 py-3 sm:px-6 lg:px-8 xl:px-10">
         <!-- Logo -->
         <router-link to="/" class="flex items-center gap-3" @click="closeMenu">
-          <img :src="logoUrl" alt="RN-BUD logo" class="h-11 w-11 rounded-full border-2 object-cover"
-            style="border-color: #0a3357;" />
+          <div class="h-12 w-12">
+            <img :src="logoUrl" alt="RN-BUD logo" style="border-color: #0a3357;" />
+          </div>
           <div>
             <p class="text-lg font-bold text-slate-900 leading-tight">RN-BUD</p>
             <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Serhii Zosyk</p>
@@ -90,8 +90,9 @@ const closeMenu = () => {
           <!-- Brand -->
           <div class="sm:col-span-2 lg:col-span-1">
             <div class="flex items-center gap-3">
-              <img :src="logoUrl" alt="RN-BUD" class="h-10 w-10 rounded-full border-2 object-cover"
-                style="border-color: #0a3357;" />
+              <div class="h-12 w-12">
+                <img :src="logoUrl" alt="RN-BUD logo" style="border-color: #0a3357;" />
+              </div>
               <div>
                 <p class="font-bold text-slate-900">RN-BUD</p>
                 <p class="text-xs text-slate-500">Serhii Zosyk</p>
@@ -120,7 +121,7 @@ const closeMenu = () => {
             <ul class="mt-4 space-y-2">
               <li v-for="link in navLinks" :key="link.label">
                 <router-link :to="link.to" class="text-sm text-slate-600 hover:text-slate-900">{{ link.label
-                  }}</router-link>
+                }}</router-link>
               </li>
             </ul>
           </div>
@@ -152,7 +153,8 @@ const closeMenu = () => {
           <p>
             © 2026 RN-BUD Serhii Zosyk.
             NIP: 8681988843 · REGON: 524615233<br>
-            E-mail: <a :href="`mailto:robimynajlepiej@gmail.com`" class="hover:underline text-slate-500">robimynajlepiej@gmail.com</a> ·
+            E-mail: <a :href="`mailto:robimynajlepiej@gmail.com`"
+              class="hover:underline text-slate-500">robimynajlepiej@gmail.com</a> ·
             Telefon: <a :href="`tel:+48733421485`" class="hover:underline text-slate-500">+48 733 421 485</a><br>
             Preferowany kontakt: Czat, e-mail, telefon
           </p>

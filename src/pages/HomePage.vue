@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import offer1Img from '@assets/offer1.jpg';
-import offer2Img from '@assets/offer2.jpg';
-import offer3Img from '@assets/offer3.jpg';
+import offer1Img from '@/assets/offer1.JPG';
+import offer2Img from '@/assets/offer2.JPG';
+import offer3Img from '@/assets/offer3.JPG';
 
 const heroHighlights = [
   { title: 'Darmowa wycena', value: 'Tak', subtitle: 'po zapytaniu lub wizji lokalnej' },
