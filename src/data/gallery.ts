@@ -20,7 +20,7 @@ const folderLabels: Record<string, string> = {
   tynki: 'Tynki',
 }
 
-const imageModules = import.meta.glob('../images/**/*.{JPG,JPEG,PNG,WEBP,GIF,SVG,jpg,jpeg,png,webp,gif,svg}', {
+const imageModules = import.meta.glob('@assets/**/*.{JPG,JPEG,PNG,WEBP,GIF,SVG,jpg,jpeg,png,webp,gif,svg}', {
   eager: true,
   import: 'default',
 }) as Record<string, string>

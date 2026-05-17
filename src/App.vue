@@ -6,7 +6,7 @@ const logoUrl = 'https://static.oferteo.pl/images/portfolio/5433282/256px_s/1749
 const navLinks = [
   { to: { path: '/', hash: '#offers' }, label: 'Usługi' },
   { to: { path: '/', hash: '#process' }, label: 'Jak działamy' },
-  { to: { path: '/gallery/realizacje' }, label: 'Galeria' },
+  // { to: { path: '/', hash: '#gallery' }, label: 'Galeria' },
   { to: { path: '/', hash: '#contact' }, label: 'Kontakt' },
 ]
 
@@ -149,7 +149,13 @@ const closeMenu = () => {
 
         <div
           class="border-t border-slate-100 py-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-400">
-          <p>© 2026 RN-BUD Serhii Zosyk. NIP: 8681988843 · REGON: 524615233</p>
+          <p>
+            © 2026 RN-BUD Serhii Zosyk.
+            NIP: 8681988843 · REGON: 524615233<br>
+            E-mail: <a :href="`mailto:robimynajlepiej@gmail.com`" class="hover:underline text-slate-500">robimynajlepiej@gmail.com</a> ·
+            Telefon: <a :href="`tel:+48733421485`" class="hover:underline text-slate-500">+48 733 421 485</a><br>
+            Preferowany kontakt: Czat, e-mail, telefon
+          </p>
           <p>Bochnia, Małopolskie · Obsługa: Małopolska, Świętokrzyskie</p>
         </div>
       </div>
