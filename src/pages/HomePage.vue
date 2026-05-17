@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import offer1Img from '@/assets/offer1.JPG';
-import offer2Img from '@/assets/offer2.JPG';
-import offer3Img from '@/assets/offer3.JPG';
+import offer1Img from '@/assets/offer1.jpg';
+import offer2Img from '@/assets/offer2.jpg';
+import offer3Img from '@/assets/offer3.jpg';
 
 const heroHighlights = [
   { title: 'Darmowa wycena', value: 'Tak', subtitle: 'po zapytaniu lub wizji lokalnej' },
@@ -110,7 +110,7 @@ const contact = {
       </div>
 
       <div class="hidden sm:block relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
-        <img src="@assets/heroImage.JPG" alt="Zespół RN-BUD pracujący nad wykończeniem wnętrza"
+        <img src="@assets/heroImage.jpg" alt="Zespół RN-BUD pracujący nad wykończeniem wnętrza"
           class="h-full w-full object-cover" loading="lazy" />
         <div class="absolute inset-x-0 bottom-0 bg-linear-to-t from-slate-950/95 to-transparent p-6 text-white">
           <p class="text-sm uppercase tracking-[0.24em] text-slate-300">RN-BUD</p>
